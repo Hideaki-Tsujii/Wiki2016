@@ -65,9 +65,8 @@
 #nv7 a{background: url(T--Kyoto--menutext-11.png);}
 #nv8 a{background: url(T--Kyoto--menutext-12.png);}
 
-#nv11  {background-image: url(T-Kyoto--pulldowntext-15.png);}
-#nv12  {background-image: url(T-Kyoto--pulldowntext-16.png);}
-#nv13  {background-image: url(T-Kyoto--pulldowntext-17.png);}
+#nv11  {background-image: url(T--Kyoto--pulldowntext-15.png);}
+#nv12  {background-image: url(T--Kyoto--pulldowntext-17.png);}
 
 #nv1 a:hover{background-position: 0 -72px;}
 #nv2 a:hover{background-position: 0 -72px;}
@@ -87,7 +86,7 @@
   }
 
 .nv > li:hover > ul > li{
-  height:16px;
+  height:24px;
 }
 
 .nv > li > ul > li  a{
@@ -96,7 +95,7 @@
 }
 
 .nv > li:hover > ul > li  a{
-  height:16px;
+  height:24px;
 }
 
 #contents-wrapper{
