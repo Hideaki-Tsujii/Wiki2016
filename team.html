@@ -66,6 +66,12 @@
 <head>
 <link href="common.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript">
+  window.onload = function bwWidth(){
+    var bw = document.getElementById("topbanner-wrapper");
+    var width = Math.max(parseInt(document.documentElement.clientWidth),1024);
+    var newwidth = width * 397 / 1368 - 72
+    bw.style.height = newwidth + "px";
+  }
   window.onresize = function bwWidth(){
     var bw = document.getElementById("topbanner-wrapper");
     var width = Math.max(parseInt(document.documentElement.clientWidth),1024);
@@ -74,7 +80,7 @@
   }
 </script>
 </head>
-<body onload="bwWidth()">
+<body>
   <div id="background">
     <img id="background-image" src="T--Kyoto--pagephoto-08.png">
   </div>
