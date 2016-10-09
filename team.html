@@ -5,18 +5,27 @@
     margin: 0;
   }
   #background{
-    height: 397px;
-    min-width: 1367px;
-    background-image: url(T--Kyoto--pagephoto-08.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    position:fixed;
+    min-width: 1024px;
+    width:100%;
+    z-index:-1;
+  }
+  #background-image{
+    width:100%;
+  }
+  #topbanner-wrapper{
+    min-width:1024px;
+    position:relative;
   }
   #topbanner{
+    position:absolute;
     width: 565px;
     height: 105px;
-    margin: 112px auto 113px;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
     background-image: url(T--Kyoto--titleteam.png);
     background-position: center center;
   }
@@ -49,13 +58,26 @@
     letter-spacing: normal;
     border: 1px solid #000;
   }
+  #contents{
+    background-color:#ffffff;
+  }
 </style>
 
 <head>
 <link href="common.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+  window.onresize = function bwWidth(){
+    var bw = document.getElementById("topbanner-wrapper");
+    var width = Math.max(parseInt(document.documentElement.clientWidth),1024);
+    var newwidth = width * 397 / 1368 - 72
+    bw.style.height = newwidth + "px";
+  }
+</script>
 </head>
 <body>
   <div id="background">
+    <img id="background-image" src="T--Kyoto--pagephoto-08.png">
+  </div>
     <div id="header">
       <div id="nav-wrapper">
         <div id="nav">
@@ -73,56 +95,58 @@
         </div>
       </div>
     </div>
-    <div id="topbanner">
+    <div id="topbanner-wrapper">
+      <div id="topbanner">
+      </div>
     </div>
-  </div>
-  <div id="contents">
-    <div>
-      <h1>header 1</h1>
-      <h2>header 2</h2>
-      <h3>header 3</h3>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <ul>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-      </ul>
-    </div>
-    <div>
-      <h1>header 1</h1>
-      <h2>header 2</h2>
-      <h3>header 3</h3>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <ul>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-      </ul>
-    </div>
-    <div>
-      <h1>header 1</h1>
-      <h2>header 2</h2>
-      <h3>header 3</h3>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-      <ul>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-        <li>listlistlistlistlist</li>
-      </ul>
-    </div>
-
+    <div id="contents-wrapper">
+	  <div id="contents">
+	    <div>
+	      <h1>header 1</h1>
+	      <h2>header 2</h2>
+	      <h3>header 3</h3>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <ul>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	      </ul>
+	    </div>
+	    <div>
+	      <h1>header 1</h1>
+	      <h2>header 2</h2>
+	      <h3>header 3</h3>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <ul>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	      </ul>
+	    </div>
+	    <div>
+	      <h1>header 1</h1>
+	      <h2>header 2</h2>
+	      <h3>header 3</h3>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+	      <ul>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	        <li>listlistlistlistlist</li>
+	      </ul>
+	    </div>
+      </div>
   </div>
   <div id="footer">
     footer
