@@ -57,36 +57,54 @@
   background-position: center;
 }
 #nv1 > a{background: url(T--Kyoto--menutext-05.png);}
-#nv2 a{background: url(T--Kyoto--menutext-06.png);}
-#nv3 a{background: url(T--Kyoto--menutext-07.png);}
-#nv4 a{background: url(T--Kyoto--menutext-08.png);}
-#nv5 a{background: url(T--Kyoto--menutext-09.png);}
-#nv6 a{background: url(T--Kyoto--menutext-10.png);}
-#nv7 a{background: url(T--Kyoto--menutext-11.png);}
-#nv8 a{background: url(T--Kyoto--menutext-12.png);}
+#nv2 > a{background: url(T--Kyoto--menutext-06.png);}
+#nv3 > a{background: url(T--Kyoto--menutext-07.png);}
+#nv4 > a{background: url(T--Kyoto--menutext-08.png);}
+#nv5 > a{background: url(T--Kyoto--menutext-09.png);}
+#nv6 > a{background: url(T--Kyoto--menutext-10.png);}
+#nv7 > a{background: url(T--Kyoto--menutext-11.png);}
+#nv8 > a{background: url(T--Kyoto--menutext-12.png);}
 
-#nv11  {background-image: url(T--Kyoto--pulldowntext-15.png);}
-#nv12  {background-image: url(T--Kyoto--pulldowntext-17.png);}
+#nv11  {background-image: url(T--Kyoto--pulldownmenu-14.png);}
+#nv12  {background-image: url(T--Kyoto--pulldownmenu-16.png);}
 
-#nv1 a:hover{background-position: 0 -72px;}
-#nv2 a:hover{background-position: 0 -72px;}
-#nv3 a:hover{background-position: 0 -72px;}
-#nv4 a:hover{background-position: 0 -72px;}
-#nv5 a:hover{background-position: 0 -72px;}
-#nv6 a:hover{background-position: 0 -72px;}
-#nv7 a:hover{background-position: 0 -72px;}
-#nv8 a:hover{background-position: 0 -72px;}
+#nv21  {background-image: url(T--Kyoto--pulldownmenu-14.png);}
+#nv22  {background-image: url(T--Kyoto--pulldownmenu-20.png);}
 
+#nv51  {background-image: url(T--Kyoto--pulldownmenu-17.png);}
+#nv52  {background-image: url(T--Kyoto--pulldownmenu-18.png);}
+#nv53  {background-image: url(T--Kyoto--pulldownmenu-19.png);}
+
+#nv71  {background-image: url(T--Kyoto--pulldownmenu-15.png);}
+#nv72  {background-image: url(T--Kyoto--pulldownmenu-22.png);}
+
+#nv1 > a:hover{background-position: 0 -72px;}
+#nv2 > a:hover{background-position: 0 -72px;}
+#nv3 > a:hover{background-position: 0 -72px;}
+#nv4 > a:hover{background-position: 0 -72px;}
+#nv5 > a:hover{background-position: 0 -72px;}
+#nv6 > a:hover{background-position: 0 -72px;}
+#nv7 > a:hover{background-position: 0 -72px;}
+#nv8 > a:hover{background-position: 0 -72px;}
+
+.nv > li > ul {
+  width:121px;
+}
+  
 .nv > li > ul > li{
   float:inherit;
   height:0px;
   transition:height 0.5s;
   opacity:0.7;
   background-color:#1e1e20;
-  }
+}
+
+.nv > li > ul > li:hover{
+  opacity:0.3;
+}
 
 .nv > li:hover > ul > li{
-  height:24px;
+  height:48px;
 }
 
 .nv > li > ul > li  a{
@@ -95,7 +113,7 @@
 }
 
 .nv > li:hover > ul > li  a{
-  height:24px;
+  height:48px;
 }
 
 #contents-wrapper{
